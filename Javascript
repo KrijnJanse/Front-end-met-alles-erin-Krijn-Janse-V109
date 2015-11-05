@@ -1,0 +1,123 @@
+/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
+
+// variable defineren
+
+var project = document.getElementById('project');
+var stage = document.getElementById('stage');
+var projectField = document.getElementById('project-field');
+var stageField = document.getElementById('stage-field');
+
+var asideOpen1 = document.getElementById('aside-open1');
+var asideTekst1 = document.getElementById ('aside-tekst1');
+
+var asideOpen2 = document.getElementById('aside-open2');
+var asideTekst2 = document.getElementById ('aside-tekst2');
+
+var asideOpen3 = document.getElementById('aside-open3');
+var asideTekst3 = document.getElementById ('aside-tekst3');
+
+var asideOpen4 = document.getElementById('aside-open4');
+var asideTekst4 = document.getElementById ('aside-tekst4');
+
+var asideOpen5 = document.getElementById('aside-open5');
+var asideTekst5 = document.getElementById ('aside-tekst5');
+
+var asideOpen6 = document.getElementById('aside-open6');
+var asideTekst6 = document.getElementById ('aside-tekst6');
+
+var asideOpen7 = document.getElementById('aside-open7');
+var asideTekst7 = document.getElementById ('aside-tekst7');
+
+var asideOpen8 = document.getElementById('aside-open8');
+var asideTekst8 = document.getElementById ('aside-tekst8');
+
+var sectionOpen1 = document.getElementById('section-open1');
+var sectionTekst1 = document.getElementById('section-tekst1');
+var sectionTekst12 = document.getElementById('section-tekst12');
+var sectionTekst13 = document.getElementById('section-tekst13');
+
+var sectionOpen2 = document.getElementById('section-open2');
+var sectionTekst2 = document.getElementById('section-tekst2');
+var sectionTekst22 = document.getElementById('section-tekst22');
+var sectionTekst23 = document.getElementById('section-tekst23');
+
+var sectionOpen3 = document.getElementById('section-open3');
+var sectionTekst3 = document.getElementById('section-tekst3');
+var sectionTekst32 = document.getElementById('section-tekst32');
+var sectionTekst33 = document.getElementById('section-tekst33');
+
+// aside open en dicht
+
+asideOpen1.addEventListener('click', function () {
+    asideTekst1.classList.toggle('open');
+});
+
+asideOpen2.addEventListener('click', function () {
+    asideTekst2.classList.toggle('open');
+});
+
+asideOpen3.addEventListener('click', function () {
+    asideTekst3.classList.toggle('open');
+});
+
+asideOpen4.addEventListener('click', function () {
+    asideTekst4.classList.toggle('open');
+});
+
+asideOpen5.addEventListener('click', function () {
+    asideTekst5.classList.toggle('open');
+});
+
+asideOpen6.addEventListener('click', function () {
+    asideTekst6.classList.toggle('open');
+});
+
+asideOpen7.addEventListener('click', function () {
+    asideTekst7.classList.toggle('open');
+});
+
+asideOpen8.addEventListener('click', function () {
+    asideTekst8.classList.toggle('open');
+});
+
+// section open en dicht
+
+sectionOpen1.addEventListener('click', function () {
+    sectionTekst1.classList.toggle('open');
+    sectionTekst12.classList.toggle('open');
+    sectionTekst13.classList.toggle('open');
+});
+
+sectionOpen2.addEventListener('click', function () {
+    sectionTekst2.classList.toggle('open');
+    sectionTekst22.classList.toggle('open');
+    sectionTekst23.classList.toggle('open');
+});
+
+sectionOpen3.addEventListener('click', function () {
+    sectionTekst3.classList.toggle('open');
+    sectionTekst32.classList.toggle('open');
+    sectionTekst33.classList.toggle('open');
+});
+
+
+
+// formulier radio buttons in- en uitklappen
+
+function click(event){
+    kiezen = event.target.id;
+    if(kiezen == 'project'){
+            console.log("project pressed");
+            projectField.classList.toggle("visible");
+            stageField.classList.remove("visible");
+            return;
+    }else{
+        console.log("stage pressed");
+        stageField.classList.toggle("visible");
+        projectField.classList.remove("visible");
+        return;
+    }
+}
+
+project.addEventListener('click', click, false);
+stage.addEventListener('click', click, false);
